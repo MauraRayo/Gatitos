@@ -7,20 +7,32 @@
     <title>Dia de gatos</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
     
 </head>
-<body > 
+<body> 
+<img src="img/img1.jpg" alt="" width="5%">
     <!-- Apii key -->
     <!-- 8b5ce595-e4ae-447f-880e-0dafc5cfe437 -->
     <!-- https://docs.thecatapi.com/ -->
-  
+  <i class="fas fa-cat"></i>
 
-    
-    <img  id="contenido" src=" " alt="" class="gatos">
+     <div>
+         <h1>Bienvenidos a MAPORA!!!</h1>
+         <p class="frase"> Si el amor tuviera sonido seria el ronroneo</p>
+
+     
+    <img  id="gatosHermosos" src=" " alt="" class="gatos">
     
     <button  class="btnGatos" onclick="mostrarGatos()">
         Miauu!
     </button>
+</div>
 
     
     
@@ -31,7 +43,7 @@
 
 function mostrarGatos(){
 
-        let contenido  = document.getElementById('contenido');
+        let gatosHermosos  = document.getElementById('gatosHermosos');
 
         let Gurl='https://api.thecatapi.com/v1/images/search';
         fetch(Gurl)
@@ -40,7 +52,7 @@ function mostrarGatos(){
         })
         .then((cat)=>{
             
-            contenido.src=cat[0].url;
+            gatosHermosos.src=cat[0].url;
             
 
 

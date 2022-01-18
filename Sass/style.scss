@@ -1,0 +1,58 @@
+// Creo variables
+$background:#E4BCD4;
+$letras:#D3BEAD;
+$tamanyo:300px;
+$border:#C8E2F2;
+$letraNegras:black;
+$tipoLetra1:'Cute Font', cursive;
+$tipoLetra2:'Old Standard TT', serif;
+
+
+body{
+    background-color: $background;
+width: 100%;
+
+
+    
+}
+h1{
+    font-family: $tipoLetra2;    
+    color: black;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow:13px -1px 11px $letras;
+
+}
+.frase{
+    color: $letraNegras;
+    font-family: $tipoLetra1;
+    width: 30%;
+    font-size: 30px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.frase:hover{
+    background-color: $border;
+    color: $letraNegras;
+    border: $border 5px dashed;
+
+}
+#gatosHermosos{
+    width: $tamanyo;
+    display:block;
+    margin-left: auto;
+   margin-right: auto;
+}
+.btnGatos{
+    color: $letras;
+    padding: 20px;
+    display:block;
+    margin-left: auto;
+   margin-right: auto;
+   margin-top: 5%;
+}
