@@ -1,61 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dia de gatos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dia de gatos</title>
+   <link rel="stylesheet" href="css/style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
+
     
 </head>
 <body> 
-<img src="img/img1.jpg" alt="" width="5%">
-    <!-- Apii key -->
-    <!-- 8b5ce595-e4ae-447f-880e-0dafc5cfe437 -->
-    <!-- https://docs.thecatapi.com/ -->
+ <img src="img/img1.jpg" alt="" width="5%">
   <i class="fas fa-cat"></i>
-
-     <div>
-         <h1>Bienvenidos a MAPORA!!!</h1>
-         <p class="frase"> Si el amor tuviera sonido seria el ronroneo</p>
-
-     
-    <img  id="gatosHermosos" src=" " alt="" class="gatos">
+   <div>
+     <h1>Bienvenidos a MAPORA!!!</h1>
+     <p class="frase"> Si el amor tuviera sonido seria el ronroneo</p>
+     <img  id="gatosHermosos" src=" " alt="" class="gatos">
     
-    <button  class="btnGatos" onclick="mostrarGatos()">
+     <button  class="btnGatos" onclick="mostrarGatos()">
         Miauu!
-    </button>
-</div>
-
-    
-    
+     </button>
+  </div>
 </body>
 </html>
 <script>
 
 
 function mostrarGatos(){
-
-        let gatosHermosos  = document.getElementById('gatosHermosos');
-
-        let Gurl='https://api.thecatapi.com/v1/images/search';
-        fetch(Gurl)
-        .then((Response)=>{
-         return Response.json();
-        })
-        .then((cat)=>{
-            
-            gatosHermosos.src=cat[0].url;
-            
-
-
+   let Gurl='https://api.thecatapi.com/v1/images/search';
+     fetch(Gurl)
+     .then((Response)=>{
+     return Response.json();
+     })
+     .then((cat)=>{       
+     gatosHermosos.src=cat[0].url;
     })
-    }
-    </script>
+  }
+</script>
